@@ -1,0 +1,184 @@
+extends pug/base
+
+append content
+    .container
+        aside.aside
+            .top
+                .top__logo
+                    img.top__images(src="images/logo.png" alt="logo")
+                    h2.top__title EGA
+                        span.danger
+                            | TOR
+                .close(id="close-btn")
+                    span.material-symbols-sharp close
+
+            .sidebar
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp grid_view
+                    h3.sidebar__text Панель управления
+                a.sidebar__link.sidebar__link--active(href="#")
+                    span.sidebar__icon.material-symbols-sharp person_outline
+                    h3.sidebar__text Клиенты
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp receipt_long
+                    h3.sidebar__text Заказы
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp insights
+                    h3.sidebar__text Аналитика
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp mail_outline
+                    h3.sidebar__text Сообщения
+                    span.sidebar__message-count 14
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp inventory
+                    h3.sidebar__text Товары
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp report_gmailerrorred
+                    h3.sidebar__text Отчеты
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp settings
+                    h3.sidebar__text Настройки
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp add
+                    h3.sidebar__text Добавить товар
+                a.sidebar__link(href="#")
+                    span.sidebar__icon.material-symbols-sharp logout
+                    h3 Выход
+
+        main.main
+            h1.main__title Панель управления 
+            .main__date
+                input.main__date-input(type="date")
+
+            .insights
+                .insights__sales
+                    span.insights__icon.material-symbols-sharp analytics
+                    .insights__middle
+                        .insights__left
+                            h3.insights__title Продажи
+                            h1.insights__price $254000,00
+                        .insights__progress
+                            svg
+                                circle(cx="38" cy="38" r="36")
+                            .insights__number
+                                p 81%
+                    small.text-muted За сутки
+
+                .insights__expenses
+                    span.material-symbols-sharp bar_chart
+                    .insights__middle
+                        .insights__left
+                            h3.insights__title Расходы
+                            h1.insights__price 17000,00
+                        .insights__progress
+                            svg
+                                circle(cx="38" cy="38" r="36")
+                            .insights__number
+                                p 62%
+                    small.text-muted За сутки
+
+                .insights__income
+                    span.material-symbols-sharp stacked_line_chart
+                    .insights__middle
+                        .insights__left
+                            h3.insights__title Доход
+                            h1.insights__price 420000,00
+                        .insights__progress
+                            svg
+                                circle(cx="38" cy="38" r="36")
+                            .insights__number
+                                p 44%
+                    small.text-muted За сутки
+
+            .recent-orders
+                h2.recent-orders__title Последние Заказы
+                table.table
+                    thead
+                        tr
+                            th Название товара
+                            th Код товара
+                            th Оплата
+                            th Статус
+                            th
+                    tbody
+                a.recent-orders__link(href="#") Показать больше
+
+        .right
+            .right__top
+                button.right__btn(id="menu-btn")
+                    span.material-symbols-sharp menu
+                .theme-toggler
+                    span.right__icon.material-symbols-sharp.active light_mode
+                    span.right__icon.material-symbols-sharp dark_mode
+                .profile
+                    .profile__info
+                        p.profile__text Привет, 
+                            b Марат
+                        small.text-muted Администратор
+                    .profile-photo
+                        img(src="images/profile-1.jpg" alt="Profile 1")
+
+            .recent-updates
+                h2.recent-updates__title Последние комментарии
+                .updates
+                    .update
+                        .profile-photo
+                            img(src="images/profile-2.jpg" alt="Profile 2")
+                        .update__message
+                            p
+                                b Иван Иванов
+                                | получил свой заказ Ноутбук.
+                            small.text-muted 2 минуты назад
+                    .update
+                        .profile-photo
+                            img(src="images/profile-3.jpg" alt="Profile 3")
+                        .update__message
+                            p
+                                b Алиса Рябинчикова 
+                                | получила свой заказ Шар для боулинга.
+                            small.text-muted 2 минуты назад
+                    .update
+                        .profile-photo
+                            img(src="images/profile-4.jpg" alt="Profile 4")
+                        .update__message
+                            p
+                                b Инна Петрова
+                                | получила свой заказ iPhone30.
+                            small.text-muted 15 минут назад
+
+                .sales-analytics
+                    h2.sales-analytics__title Аналитика продаж
+                    .sales-analytics__item.outline
+                        .icon
+                            span.material-symbols-sharp shopping_cart
+                        .right
+                            .info
+                                h3 Онлайн заказы
+                                small.text-muted За сутки
+                            h5.success +39%
+                            h3 3849
+
+                    .sales-analytics__item.offline
+                        .icon
+                            span.material-symbols-sharp local_mall
+                        .right
+                            .info
+                                h3 Офлайн заказы
+                                small.text-muted За сутки
+                            h5.danger -17%
+                            h3 1100
+
+                    .sales-analytics__item.customers
+                        .icon
+                            span.material-symbols-sharp person
+                        .right
+                            .info
+                                h3 Новые клиенты
+                                small.text-muted За сутки
+                            h5.success +25%
+                            h3 849
+
+                    .sales-analytics__item.add-product
+                        div.sales-analytics__btn
+                            span.material-symbols-sharp add
+                            h3.sales-analytics__btn-text Добавить товар

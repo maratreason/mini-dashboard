@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,500,1,0" rel="stylesheet">
+    <link href="css/main.min.css" rel="stylesheet">
+    <title>Pug tutorial</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="aside">
+        <div class="top">
+          <div class="top__logo"><img class="top__images" src="images/logo.png" alt="logo">
+            <h2 class="top__title">EGA<span class="danger">TOR</span></h2>
+          </div>
+          <div class="close" id="close-btn"><span class="material-symbols-sharp">close</span></div>
+        </div>
+        <div class="sidebar"><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">grid_view</span>
+            <h3 class="sidebar__text">Панель управления</h3></a><a class="sidebar__link sidebar__link--active" href="#"><span class="sidebar__icon material-symbols-sharp">person_outline</span>
+            <h3 class="sidebar__text">Клиенты</h3></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">receipt_long</span>
+            <h3 class="sidebar__text">Заказы</h3></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">insights</span>
+            <h3 class="sidebar__text">Аналитика</h3></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">mail_outline</span>
+            <h3 class="sidebar__text">Сообщения</h3><span class="sidebar__message-count">14</span></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">inventory</span>
+            <h3 class="sidebar__text">Товары</h3></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">report_gmailerrorred</span>
+            <h3 class="sidebar__text">Отчеты</h3></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">settings</span>
+            <h3 class="sidebar__text">Настройки</h3></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">add</span>
+            <h3 class="sidebar__text">Добавить товар</h3></a><a class="sidebar__link" href="#"><span class="sidebar__icon material-symbols-sharp">logout</span>
+            <h3>Выход</h3></a></div>
+      </aside>
+      <main class="main">
+        <h1 class="main__title">Панель управления </h1>
+        <div class="main__date">
+          <input class="main__date-input" type="date">
+        </div>
+        <div class="insights">
+          <div class="insights__sales"><span class="insights__icon material-symbols-sharp">analytics</span>
+            <div class="insights__middle">
+              <div class="insights__left">
+                <h3 class="insights__title">Продажи</h3>
+                <h1 class="insights__price">$254000,00</h1>
+              </div>
+              <div class="insights__progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="insights__number">
+                  <p>81%</p>
+                </div>
+              </div>
+            </div><small class="text-muted">За сутки</small>
+          </div>
+          <div class="insights__expenses"><span class="material-symbols-sharp">bar_chart</span>
+            <div class="insights__middle">
+              <div class="insights__left">
+                <h3 class="insights__title">Расходы</h3>
+                <h1 class="insights__price">17000,00</h1>
+              </div>
+              <div class="insights__progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="insights__number">
+                  <p>62%</p>
+                </div>
+              </div>
+            </div><small class="text-muted">За сутки</small>
+          </div>
+          <div class="insights__income"><span class="material-symbols-sharp">stacked_line_chart</span>
+            <div class="insights__middle">
+              <div class="insights__left">
+                <h3 class="insights__title">Доход</h3>
+                <h1 class="insights__price">420000,00</h1>
+              </div>
+              <div class="insights__progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="insights__number">
+                  <p>44%</p>
+                </div>
+              </div>
+            </div><small class="text-muted">За сутки</small>
+          </div>
+        </div>
+        <div class="recent-orders">
+          <h2 class="recent-orders__title">Последние Заказы</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Название товара</th>
+                <th>Код товара</th>
+                <th>Оплата</th>
+                <th>Статус</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table><a class="recent-orders__link" href="#">Показать больше</a>
+        </div>
+      </main>
+      <div class="right">
+        <div class="right__top">
+          <button class="right__btn" id="menu-btn"><span class="material-symbols-sharp">menu</span></button>
+          <div class="theme-toggler"><span class="right__icon material-symbols-sharp active">light_mode</span><span class="right__icon material-symbols-sharp">dark_mode</span></div>
+          <div class="profile">
+            <div class="profile__info">
+              <p class="profile__text">Привет, <b>Марат</b></p><small class="text-muted">Администратор</small>
+            </div>
+            <div class="profile-photo"><img src="images/profile-1.jpg" alt="Profile 1"></div>
+          </div>
+        </div>
+        <div class="recent-updates">
+          <h2 class="recent-updates__title">Последние комментарии</h2>
+          <div class="updates">
+            <div class="update">
+              <div class="profile-photo"><img src="images/profile-2.jpg" alt="Profile 2"></div>
+              <div class="update__message">
+                <p><b>Иван Иванов</b>получил свой заказ Ноутбук.</p><small class="text-muted">2 минуты назад</small>
+              </div>
+            </div>
+            <div class="update">
+              <div class="profile-photo"><img src="images/profile-3.jpg" alt="Profile 3"></div>
+              <div class="update__message">
+                <p><b>Алиса Рябинчикова </b>получила свой заказ Шар для боулинга.</p><small class="text-muted">2 минуты назад</small>
+              </div>
+            </div>
+            <div class="update">
+              <div class="profile-photo"><img src="images/profile-4.jpg" alt="Profile 4"></div>
+              <div class="update__message">
+                <p><b>Инна Петрова</b>получила свой заказ iPhone30.</p><small class="text-muted">15 минут назад</small>
+              </div>
+            </div>
+          </div>
+          <div class="sales-analytics">
+            <h2 class="sales-analytics__title">Аналитика продаж</h2>
+            <div class="sales-analytics__item outline">
+              <div class="icon"><span class="material-symbols-sharp">shopping_cart</span></div>
+              <div class="right">
+                <div class="info">
+                  <h3>Онлайн заказы</h3><small class="text-muted">За сутки</small>
+                </div>
+                <h5 class="success">+39%</h5>
+                <h3>3849</h3>
+              </div>
+            </div>
+            <div class="sales-analytics__item offline">
+              <div class="icon"><span class="material-symbols-sharp">local_mall</span></div>
+              <div class="right">
+                <div class="info">
+                  <h3>Офлайн заказы</h3><small class="text-muted">За сутки</small>
+                </div>
+                <h5 class="danger">-17%</h5>
+                <h3>1100</h3>
+              </div>
+            </div>
+            <div class="sales-analytics__item customers">
+              <div class="icon"><span class="material-symbols-sharp">person</span></div>
+              <div class="right">
+                <div class="info">
+                  <h3>Новые клиенты</h3><small class="text-muted">За сутки</small>
+                </div>
+                <h5 class="success">+25%</h5>
+                <h3>849</h3>
+              </div>
+            </div>
+            <div class="sales-analytics__item add-product">
+              <div class="sales-analytics__btn"><span class="material-symbols-sharp">add</span>
+                <h3 class="sales-analytics__btn-text">Добавить товар</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/orders.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
